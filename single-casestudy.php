@@ -2,12 +2,9 @@
 			
 			<div id="article" class="clearfix">
 			
-				<div id="articleSidebar">
-					<?php if ( has_post_thumbnail() ) { the_post_thumbnail();} ?>
-					
-				</div>
+		
 			
-				<div id="articleContent" class="col620 clearfix" role="main" >
+				<div id="mainCustom" class="col620 clearfix" role="main" >
 					
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -33,24 +30,24 @@
 							
 						
 						<footer>
-			
-							<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
 							
-							<nav class="ccarchive">
-								<?php previous_post(); ?><br />
-								<?php next_post(); ?>
-							</nav>
+							<p><em>All perspectives and views expressed here are my own. <br /><br /></em></p>
+							<!--<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>//-->
 							
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
 				
-					<?php comments_template(); ?>
+					<!--<?php comments_template(); ?>
 					
+						<div>
+							<p>
+								<?php previous_post(); ?>    <?php next_post(); ?>
+							</p>
+						</div>
 						
-						
-					<?php endwhile; ?>			
+					<?php endwhile; ?>	//-->		
 					
 					<?php else : ?>
 					
@@ -70,9 +67,7 @@
 					<?php endif; ?>
 				</div>
 				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
-    
+        
 			</div> <!-- end #content -->
 		</div>
 	</div>

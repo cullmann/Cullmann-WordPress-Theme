@@ -9,7 +9,7 @@ Template Name: Custom Page Example
 			<div id="content" class="clearfix">
 			
 				<div id="main" class="col620 clearfix" role="main">
-
+				<div id="w">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
@@ -56,8 +56,8 @@ Template Name: Custom Page Example
 			
 				</div> <!-- end #main -->
     
-				<?php get_sidebar(); // sidebar 1 ?>
     
+    		</div> <!-- end #w -->
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>

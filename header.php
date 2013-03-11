@@ -3,11 +3,16 @@
 
 <head>
 	<meta charset="utf-8"/>
-	<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+	<title><?php wp_title(, true, 'right'); ?> <?php bloginfo('name'); ?></title>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
+	<link rel="shortcut icon" type="image/ico" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
+	
+	<meta name="keywords" content="Chris Cullmann, Digital Strategy, Healthcare Marketing, Creative Director, Creative Strategist, Technologist, Father, Husband, Creator" />
+	<meta name="description" content="Chris Cullmann is a Digital Strategist and Creative Director. He works to craft projects that are both effective and aesthetically beautiful. His background in design and development help him plan and execute campaigns that reach across every channel from mail to socia and every platform from desktop to mobile. Chris works for Ogilvy CommonHealth Worldwide, a multi-channel agency dedicated to healthcare marketing. The opinions expressed on this site are his own and do not reflect those of his employer or his professionally connections." />
+	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/library/js/jqueryShowoff/jquery.jshowoff.min.js"></script>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -19,7 +24,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
-	<!--<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>//-->
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
 </head>
 	
 <body <?php body_class(); ?>>
@@ -37,9 +42,7 @@
 		
 		<!--BEGIN NAVIGATION//-->	
 		<div id="navigation">
-			<ul>
 				<?php wp_nav_menu( array('menu' => 'Main Menu', 'container' => false )); ?>
-			</ul>
 		</div>
 		<!--END NAVIGATION//-->	
 		

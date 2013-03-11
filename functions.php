@@ -40,7 +40,7 @@ When disabled, it would look like this:
 */
 
 // Expirimental Features
-include_once('library/plugins.php');
+// include_once('library/plugins.php');
 
 // Adding Custom Post Type
 include_once('library/custom-post-type.php');
@@ -133,5 +133,35 @@ function bones_comments($comment, $args, $depth) {
     <!-- </li> is added by wordpress automatically -->
 <?php
 }
+
+
+function my_custom_post_casestudy() {
+    $labels = array(
+        'name'               => _x( 'Case Study', 'post type general name' ),
+        'singular_name'      => _x( 'Case Study', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'book' ),
+        'add_new_item'       => __( 'Add New Case Study' ),
+        'edit_item'          => __( 'Edit Case Study' ),
+        'new_item'           => __( 'New Case Study' ),
+        'all_items'          => __( 'All Case Studies' ),
+        'view_item'          => __( 'View Case Studies' ),
+        'search_items'       => __( 'Search Case Studies' ),
+        'not_found'          => __( 'No Case Studies found' ),
+        'not_found_in_trash' => __( 'No Case Studies found in the Trash' ),
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Case Studies'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Holds our products and product specific data',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'comments' ),
+        /*'has_archive'   => true,*/
+        'permalink_epmask' => EP_PERMALINK,
+    );
+    register_post_type( 'casestudy', $args );
+}
+add_action( 'init', 'my_custom_post_casestudy' );
 
 ?>

@@ -5,14 +5,14 @@
 			
 				<div id="articleSidebar">
 					<?php if ( has_post_thumbnail() ) { the_post_thumbnail();} ?>
-					<?php the_content(); ?>
+					<!--<?php the_content(); ?>//-->
 				</div>
 			
 				<div id="articleContent" class="col620 clearfix" role="main">
 					
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+					<article id="w-post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 						
 						<header>
 							
@@ -31,21 +31,10 @@
 						</section> <!-- end article section -->
 						
 						
-							
-						
-						<footer>
-			
-							<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
-							
-						</footer> <!-- end article footer -->
 					
-					</article> <!-- end article -->
-					
-				
-					<?php comments_template(); ?>
-					
-						<div>
+						<div id="socialSig">
 							<p>
+								<br />
 								Follow me on <a href="http://www.twitter.com/cullmann">Twitter</a>, 
 								link to me on <a href="http://www.linkedin.com/in/cullmann">LinkedIn</a>, 
 								or find me on <a href="http://www.facebook.com/cullmann">Facebook</a>.
@@ -53,6 +42,7 @@
 							</p>
 						</div>
 						
+						</article> <!-- end article -->
 					<?php endwhile; ?>			
 					
 					<?php else : ?>
