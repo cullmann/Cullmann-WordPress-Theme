@@ -313,6 +313,20 @@ p {
 }
 
 
+blockquote {
+	padding: 20px 20px 20px 30px; 
+	margin-bottom: 20px; 
+	background-color: #79A33D;
+}
+
+blockquote p {
+	font-family: georgia, times, serif;
+	font-style: italic;
+	font-size: 20px;
+	line-height: 1.4em;
+	color: #ffffff;
+}
+
 
 
 #section h1 {
