@@ -14,9 +14,7 @@
 					
 						<section class="post_content">
 							
-							<p>You may be lost, but I'm glad you found me. The article that was linked or the page you found in search isn't here, but you can search using the field below or visit the homepage for the most recent posts and POVs.</p>
-							<p><em>Thanks for visiting (and <a href="https://itunes.apple.com/us/app/google-maps/id585027354?mt=8">download Google maps</a> for heaven's sake)</em></p>
-							
+							<p>You may be lost, but I'm glad you found me. The article that was linked or the page you found in search isn't here, but you can search using the field below or visit the homepage for the most recent posts and POVs.</p>							
 					
 						</section> <!-- end article section -->
 						
